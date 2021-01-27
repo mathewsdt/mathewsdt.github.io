@@ -1,0 +1,339 @@
+.section {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.section h1 {
+	text-align: center;
+	font-size: 2rem;
+	font-family: helvetica;
+	background: black;
+	padding: 10px;
+	margin: 15px;
+	z-index: 1;
+}
+
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+
+/* Navbar */
+.Navbar {
+	overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
+	background-color: black; /* This colors the navbar black */
+	position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
+	top: 0; /* This ensures no space is displayed above the navbar */
+	width: 100%; /* This makes the navbar span the entire width of the page */
+	z-index: 1; /*This ensures other elements don't display over the navbar */
+}
+
+/* Navbar text */
+.Navbar a {
+	float: left; /* This specifies that the text floats on the left on the navbar */
+	display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
+	color: white; /* This is the font color for text on our navbar */
+	padding: 14px 16px; /* This adds padding around our text */
+	text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
+	font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
+	font-size: 20px; /* This specifies the font size for text on our navbar */
+	text-align: center; /* This centers the text within its container */
+}
+
+/* Navbar hover effect */
+.Navbar a:hover {
+	background-color: #F4F4F4; /*  This defines the background color that will display when you hover over the text on the navbar */
+	color: black; /* This defines the font color that will display when you hover over the text on the navbar */
+	font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+}
+
+
+/* Text over the video */ 
+.Video_Text { 
+	background: black; /* This provides a semi-transparent background for the text to sit over */
+	color: white; 
+	width: 100%;
+	padding: 20px; /* This adds padding around the text so that the background goes slightly beyond the text */
+	margin-top: 0%;
+}
+
+/* Table - this section covers the styling of the columns and rows within our table */
+* { /* The asterisk is a universal selector that applies this effect to all elements on the page */
+	box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
+}
+
+.Column_1 {
+	float: left;  
+	width: 50%; /* This ensures one column takes up half the page width */
+	padding: 10px; 
+	padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
+	height: 400px; /* This sets the height of our column at 400 pixels - if you change the text within the columns, you will need to adjust the column heights accordingly */
+	background-color: white; 
+}
+
+.Column_2 {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	padding-top: 1.9%;
+	height: 400px;
+	background-color:black;
+}
+
+.Column_3 {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	padding-top: 3.5%;
+	height: 400px;
+	background-color:Black;
+}
+
+.Row:after { /* This inserts something after the content of selected elements */
+	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+	clear: both; /* This clears any other elements from floating on the left or the right of an element */
+}
+
+/* Heading 1 elements */
+h1 {
+	text-transform: uppercase; /* We are capitalizing our headings */
+	font-family: "Trebuchet MS", Optima; 
+	text-align: center;
+	margin-top: 3%; /* We are adding a small margin above the headings */
+	color: #1a1a1a;
+}
+
+/* Paragraph elements */
+p {
+	font-family: Perpetua, Rockwell Extra Bold;
+	text-align: justify;
+	letter-spacing: 1px; /* This expands the text slightly */
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Center align elements - this embraces all centered text */
+center {
+	font-family: Perpetua, Rockwell Extra Bold;
+	text-align: center;
+	letter-spacing: 1px;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Anchor elements */
+a {
+	color: rgb(75, 72, 72); /* We are ensuring all links are blue */
+	font-weight: bold;
+}
+
+/* Quotation elements */
+q {
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* Image elements */
+img {
+	filter: grayscale(75%); /* This rids our pictures of 75% of their color */
+    border-radius: 8px; /* This causes our images to have slightly rounded edges */
+    max-width: 100%; 
+    height: 340px; 
+	margin-left: auto; /* This in combination with margin-right: auto centers our images */
+    margin-right: auto;
+	display: block;	/* By specifying block display we can ensure our images are able to be centered */
+}
+
+
+
+
+
+/* Hover effect for submit button */
+input[type=submit]:hover {
+	background-color: white; /* Makes the background turn white when hovered over */
+	color: black; /* Makes the font turn black when hovered over */
+	font-weight: bold; /* Makes the font bold when hovered over */
+	transform: scale(1.5); /* Makes the button increase 1.5 times in size */ 
+	transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds from start to finish */
+}
+
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid white;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+  }
+  
+  input[type=submit] {
+	background-color: gray;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+	background-color:white;
+  }
+  
+  .container {
+	border-radius: 5px;
+	background-color: black;
+	padding: 20px;
+  }
+
+
+  /* Image element hover effects */
+img:hover {
+	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
+    transition: transform 1s;
+	transform: scale(1.1);
+}
+
+
+  .section2 {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.section h2 {
+	text-align: end;
+	font-size: 2rem;
+	font-family: helvetica;
+	background: black;
+	padding: 10px;
+	margin: 15px;
+	z-index: 1;
+}
+
+.video-container2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+/* Contact form styling */
+
+/* Makes contact form button slide in from right on page load */
+@keyframes movePopup {
+	from {right: -40vw;}
+	to {bottom: 1.75vw;}
+  }
+  
+  /* Button used to open the contact form - fixed at the bottom of the page */
+  .Pop_Up_Button {
+	bottom: 1.75vw;
+	right: 1.75vw;
+	width: 25vw;  
+	background-color: rgb(4, 4, 4);
+	color: rgb(245, 240, 240);
+	border: solid;
+	cursor: pointer;
+	position: fixed;
+	-webkit-animation: movePopup 5s;
+	animation: movePopup 5s;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+	border: 3px solid #000000;
+	z-index: 8;
+	display: none;
+	position: fixed;
+	bottom: 6px;
+	right: 6px;
+  }
+  
+  /* Form styling */
+  .form-container {
+	max-width: 49vw;
+	padding: 9px;
+	background-color: white;
+  }
+  
+  /* Input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+	width: 100%;
+	padding: .93vw;
+	margin: .6vw 0 .6vw 0;
+	border: none;
+	background: Gainsboro;
+	font-family: Helvetica, Avant Garde;
+	font-size: 1vw; 
+  }
+  
+  /* Submit button */
+  .form-container .btn {
+	background-color: white;
+	color: black;
+	border-color: black;
+	margin-bottom:1vh;
+  }
+  
+  /* Close button */
+  .form-container .cancel {
+	background-color: rgb(5, 5, 5);
+	color: white;
+	border-color: gray;
+  }
+  
+  /* Button styling */
+  button {
+	font-family: "Trebuchet MS", Optima; 
+	letter-spacing: .3vw; 
+	font-size: 1.5vw;
+	font-weight: bold;
+	padding: 1.5vw 1.5vw;
+	border-style: solid;
+	cursor: pointer;
+	width: 100%;
+	height: auto;
+  }
+  
+  /* Hover effect for buttons */
+  button:hover, .form-container .btn:hover{
+	color: white;
+	background-color:  rgb(64, 65, 67);
+	-webkit-transition-duration: 1s; 
+	transition-duration: 1s;
+	border-style: solid;
+	border-color: silver;
+  }
+  .form-container .cancel:hover{
+	color: white;
+	background-color: rgb(68, 69, 70);
+	-webkit-transition-duration: 1s; 
+	transition-duration: 1s;
+	border-style: solid;
+	border-color: black;
+  }	
+
+
+  
+  
+
+
